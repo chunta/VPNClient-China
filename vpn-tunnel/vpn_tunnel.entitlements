@@ -8,7 +8,7 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.hzjuzhi.VPNClient</string>
+		<string>group.mildgrind.icefuse.dev</string>
 	</array>
 </dict>
 </plist>

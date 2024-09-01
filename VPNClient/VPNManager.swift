@@ -96,7 +96,7 @@ class VPNManager {
     func newConfiguration() -> NETunnelProviderProtocol {
         //加载ovpn文件
         guard
-            let configurationFileURL = Bundle.main.url(forResource: "vpnclient", withExtension: "ovpn"),
+            let configurationFileURL = Bundle.main.url(forResource: "rex", withExtension: "ovpn"),
             let configurationFileContent = try? Data(contentsOf: configurationFileURL)
         else {
             fatalError()
@@ -105,7 +105,7 @@ class VPNManager {
         let tunnelProtocol = NETunnelProviderProtocol()
         tunnelProtocol.serverAddress = ""
         //指定network extension 确保bundleIdentifier和network extension的id一致
-        tunnelProtocol.providerBundleIdentifier = Bundle.main.bundleIdentifier!.appending(".vpn-tunnel")
+        tunnelProtocol.providerBundleIdentifier = Bundle.main.bundleIdentifier!.appending(".vpnclientnetwork")
         tunnelProtocol.providerConfiguration = ["ovpn": configurationFileContent]
         
         return tunnelProtocol

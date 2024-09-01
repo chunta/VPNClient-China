@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		771A65F125FF2CDB00FFD029 /* vpnclient.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = 771A65F025FF2CDB00FFD029 /* vpnclient.ovpn */; };
 		B2FD563E4BAF4589C7101527 /* Pods_vpn_tunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A739C289A25A30F1DBBCB74 /* Pods_vpn_tunnel.framework */; };
 		E1034539ACFA01A967B90D0B /* Pods_VPNClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A986C7171CB1BA974EA9CDD /* Pods_VPNClientTests.framework */; };
+		F7C03B522C84576200AA31AC /* rex.ovpn in Resources */ = {isa = PBXBuildFile; fileRef = F7C03B512C84576200AA31AC /* rex.ovpn */; };
 		F8B5A65744C2642EB5EE2A8D /* Pods_VPNClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97301ACB3CB0D07779ABC134 /* Pods_VPNClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		B918ADCE4EF66AD7DDF3DADA /* Pods-VPNClient-VPNClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNClient-VPNClientUITests.release.xcconfig"; path = "Target Support Files/Pods-VPNClient-VPNClientUITests/Pods-VPNClient-VPNClientUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C050BA198BBBB36E25C1B2E5 /* Pods-VPNClient-VPNClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNClient-VPNClientUITests.debug.xcconfig"; path = "Target Support Files/Pods-VPNClient-VPNClientUITests/Pods-VPNClient-VPNClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7C827BE8D96E91CD97DF318 /* Pods-VPNClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNClientTests.release.xcconfig"; path = "Target Support Files/Pods-VPNClientTests/Pods-VPNClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		F7C03B512C84576200AA31AC /* rex.ovpn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rex.ovpn; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +154,6 @@
 				0B5B66147DA9564A41950E3D /* Pods-vpn-tunnel.debug.xcconfig */,
 				B826B011D721380FEFE5E103 /* Pods-vpn-tunnel.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,6 +184,7 @@
 		771A659C25FF247D00FFD029 /* VPNClient */ = {
 			isa = PBXGroup;
 			children = (
+				F7C03B512C84576200AA31AC /* rex.ovpn */,
 				771A65F025FF2CDB00FFD029 /* vpnclient.ovpn */,
 				771A65D025FF268900FFD029 /* VPNClient.entitlements */,
 				771A659D25FF247D00FFD029 /* AppDelegate.swift */,
@@ -369,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				771A65AA25FF247F00FFD029 /* LaunchScreen.storyboard in Resources */,
+				F7C03B522C84576200AA31AC /* rex.ovpn in Resources */,
 				771A65A725FF247F00FFD029 /* Assets.xcassets in Resources */,
 				771A65F125FF2CDB00FFD029 /* vpnclient.ovpn in Resources */,
 				771A65A525FF247D00FFD029 /* Main.storyboard in Resources */,
@@ -706,15 +709,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VPNClient/VPNClient.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K6T6NB7VRW;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6P7LJS7G56;
 				INFOPLIST_FILE = VPNClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hzjuzhi.VPNClient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mildgrind.icefuse.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "IceFuse Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -728,15 +735,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = VPNClient/VPNClient.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K6T6NB7VRW;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6P7LJS7G56;
 				INFOPLIST_FILE = VPNClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hzjuzhi.VPNClient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mildgrind.icefuse.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "IceFuse Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -835,16 +846,20 @@
 			baseConfigurationReference = 0B5B66147DA9564A41950E3D /* Pods-vpn-tunnel.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "vpn-tunnel/vpn_tunnel.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K6T6NB7VRW;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6P7LJS7G56;
 				INFOPLIST_FILE = "vpn-tunnel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hzjuzhi.VPNClient.vpn-tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mildgrind.icefuse.dev.vpnclientnetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "IceFuse Dev NetworkExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -856,16 +871,20 @@
 			baseConfigurationReference = B826B011D721380FEFE5E103 /* Pods-vpn-tunnel.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "vpn-tunnel/vpn_tunnel.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K6T6NB7VRW;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6P7LJS7G56;
 				INFOPLIST_FILE = "vpn-tunnel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hzjuzhi.VPNClient.vpn-tunnel";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mildgrind.icefuse.dev.vpnclientnetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "IceFuse Dev NetworkExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
